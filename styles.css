@@ -1,90 +1,100 @@
-/* General Styles */
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: black;
+    background-color: #090809;
     color: white;
+    font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
-/* Banner */
 .banner {
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    justify-content: center; /* Centers the image horizontally */
+    margin-top: 20px; /* Adds spacing above the title */
 }
 
 .banner img {
-    width: 90%; /* Makes it responsive */
-    max-width: 600px; /* Prevents it from being too large */
-    height: auto;
+    width: auto; /* Keeps the original width */
+    height: 250px; /* Set a fixed height to match the design */
+    display: block;
 }
 
-/* Title */
+
+.container {
+    padding: 20px;
+}
+
 h1 {
-    font-size: 24px;
+    font-family: 'Great Vibes', cursive; /* Elegant script font */
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
     margin-top: 10px;
+    
+    /* Gradient Text Effect */
+    background: white; /* Black to Gold */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Glow Effect */
+    text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.8), 
+                 0px 0px 12px rgba(255, 215, 0, 0.6), 
+                 0px 0px 16px rgba(255, 215, 0, 0.4);
+    
+    /* Animation for Light Shine */
+    animation: glowing 2s infinite alternate;
 }
 
-/* Social Media Buttons */
+/* Glowing Animation */
+@keyframes glowing {
+    0% {
+        text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.8), 
+                     0px 0px 12px rgba(255, 215, 0, 0.6), 
+                     0px 0px 16px rgba(255, 215, 0, 0.4);
+    }
+    100% {
+        text-shadow: 0px 0px 12px rgba(255, 215, 0, 1), 
+                     0px 0px 16px rgba(255, 215, 0, 0.8), 
+                     0px 0px 20px rgba(255, 215, 0, 0.6);
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .button {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 80%; /* Adjust width for responsiveness */
-    max-width: 400px; /* Prevents it from being too large */
-    background: white;
+    background-color: white;
     color: black;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 50px;
-    padding: 12px;
-    margin: 10px auto;
     text-decoration: none;
-    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.2);
-    transition: transform 0.2s ease-in-out;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 50px;
+    padding: 15px 25px;
+    width: 300px;
+    margin: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
 }
 
 .button img {
-    width: 24px; /* Adjust icon size */
+    width: 24px;
     height: 24px;
     margin-right: 10px;
 }
 
+.button span {
+    flex-grow: 1;
+    text-align: left;
+}
+
 .button:hover {
     transform: scale(1.05);
-}
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 20px;
-    }
-    
-    .button {
-        width: 90%; /* Increase width for smaller screens */
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    .banner img {
-        width: 95%; /* Allow more flexibility on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 18px;
-    }
-    
-    .button {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    .button img {
-        width: 20px;
-        height: 20px;
-    }
 }
