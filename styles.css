@@ -1,68 +1,90 @@
-/* styles.css */
+/* General Styles */
 body {
-    background-color: #090809;
-    color: white;
     font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
+/* Banner */
 .banner {
     display: flex;
-    justify-content: center; /* Centers the image horizontally */
-    margin-top: 20px; /* Adds spacing above the title */
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .banner img {
-    width: auto; /* Keeps the original width */
-    height: 250px; /* Set a fixed height to match the design */
-    display: block;
+    width: 90%; /* Makes it responsive */
+    max-width: 600px; /* Prevents it from being too large */
+    height: auto;
 }
 
-
-.container {
-    padding: 20px;
-}
-
+/* Title */
 h1 {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
-.buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
+/* Social Media Buttons */
 .button {
     display: flex;
     align-items: center;
-    background-color: white;
+    justify-content: center;
+    width: 80%; /* Adjust width for responsiveness */
+    max-width: 400px; /* Prevents it from being too large */
+    background: white;
     color: black;
-    text-decoration: none;
-    font-weight: bold;
     font-size: 18px;
+    font-weight: bold;
     border-radius: 50px;
-    padding: 15px 25px;
-    width: 300px;
-    margin: 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    padding: 12px;
+    margin: 10px auto;
+    text-decoration: none;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.2);
+    transition: transform 0.2s ease-in-out;
 }
 
 .button img {
-    width: 24px;
+    width: 24px; /* Adjust icon size */
     height: 24px;
     margin-right: 10px;
 }
 
-.button span {
-    flex-grow: 1;
-    text-align: left;
-}
-
 .button:hover {
     transform: scale(1.05);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px;
+    }
+    
+    .button {
+        width: 90%; /* Increase width for smaller screens */
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .banner img {
+        width: 95%; /* Allow more flexibility on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 18px;
+    }
+    
+    .button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .button img {
+        width: 20px;
+        height: 20px;
+    }
 }
