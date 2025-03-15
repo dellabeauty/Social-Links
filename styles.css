@@ -1,0 +1,68 @@
+/* styles.css */
+body {
+    background-color: #090809;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    margin-top: 20px; /* Adds spacing above the title */
+}
+
+.banner img {
+    width: auto; /* Keeps the original width */
+    height: 250px; /* Set a fixed height to match the design */
+    display: block;
+}
+
+
+.container {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 50px;
+    padding: 15px 25px;
+    width: 300px;
+    margin: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.button span {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
